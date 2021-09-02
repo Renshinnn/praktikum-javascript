@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <script>
+        function tambah(){
+            var angka1=parseFloat(document.calculator.angka1.value);
+            var angka2=parseFloat(document.calculator.angka2.value);
+            var hasil= angka1+angka2;
+        document.calculator.hasil.value=hasil;
+        }
+        function kurang(){
+            var angka1=parseFloat(document.calculator.angka1.value);
+            var angka2=parseFloat(document.calculator.angka2.value);
+            var hasil= angka1-angka2;
+            document.calculator.hasil.value=hasil;
+        }
+        function kali(){
+            var angka1=parseFloat(document.calculator.angka1.value);
+            var angka2=parseFloat(document.calculator.angka2.value);
+            var hasil= angka1*angka2;
+            document.calculator.hasil.value=hasil;
+        }
+        function bagi(){
+            var angka1=parseFloat(document.calculator.angka1.value);
+            var angka2=parseFloat(document.calculator.angka2.value);
+            var hasil= angka1/angka2;
+            document.calculator.hasil.value=hasil;
+        }
+        function modulus(){
+            var angka1=parseFloat(document.calculator.angka1.value);
+            var angka2=parseFloat(document.calculator.angka2.value);
+            var hasil= angka1%angka2;
+            document.calculator.hasil.value=hasil;
+}
+    </script>
+</head>
+<body>
+    <form name="calculator">
+        <p>Bilangan pertama <input type="number" name="angka1"></p>
+        <p>Bilangan kedua <input type="number" name="angka2"></p>
+        <p><input class="tombol" type="button" onclick="tambah()" value="  +  ">--<input class="tombol" type="button" onclick="kurang()" value="  -  ">--<input class="tombol" type="button" onclick="kali()" value="  *  ">--<input class="tombol" type="button" onclick="bagi()" value="  /  ">--<input class="tombol" type="button" onclick="modulus()" value="  %  "></p>
+        <p>Hasil<input type="number" name="hasil"></p>
+        
+    </form>
+</body>
+</html>
